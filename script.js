@@ -13,6 +13,13 @@ document.addEventListener("keypress", function(event) {
     }
 });
 
+function funcLoad(){
+    if (window.matchMedia("(max-width: 601px)").matches){
+        console.log("tu")
+        imgMasaza.style.top = window.innerHeight - 100 + 'px';
+    }
+}
+
 const url = "https://docs.google.com/spreadsheets/d/1dVug_FnHmIrpI9rDUQiRBhx85HIuduwdoCH9WWnLS3c/export?format=csv"
 fetch(url).then(result=>result.text()).then(function(csvtext){
     var myListOfArrays = [];
