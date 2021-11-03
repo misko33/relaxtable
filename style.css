@@ -13,6 +13,15 @@ html, body {
   overflow-x: hidden;
 }
 
+.imgMasaza{
+  position: absolute;
+  width: 400px;
+  top: 320px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 h1 {
   position: relative;
   color: #fff;
@@ -36,7 +45,6 @@ h1 {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
 
 #register {
   background: #fff;
@@ -165,4 +173,12 @@ h1 {
   .logo {width: 60%}
   .center {width: 80%;}
   #register {width: 100%;}
+  .imgMasaza{
+    position: absolute;
+    width: 300px;
+    margin: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 87%);
+    transform: translate(-50%, 87%);
+  }
 }
