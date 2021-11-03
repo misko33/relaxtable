@@ -1,0 +1,168 @@
+.logo {
+    display: block;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+html, body {
+  margin: 0;
+  background: #55585d;
+  height: 100%;
+  font-family: 'Noto Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  position: relative;
+  color: #fff;
+  opacity: 0;
+  transition: .8s ease-in-out;
+}
+
+#progress {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.6);
+  height: 15px;
+  top: 0px;
+  width: 0;
+  transition: width 0.2s ease-in-out;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+#register {
+  background: #fff;
+  position: relative;
+  width: 550px;
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+  transition: transform .1s ease-in-out;
+}
+
+#register.close {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: .8s ease-in-out;
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,0);
+}
+
+#forwardButton {
+  position: absolute;
+  right: 20px;
+  bottom: -5px;
+  font-size: 40px;
+  color: rgb(116, 116, 116);
+  float: right;
+  cursor: pointer;
+  z-index: 20
+}
+#previousButton {
+  position: absolute;
+  font-size: 18px;
+  left: 30px; /* same as padding on container */
+  top: 5px;
+  z-index: 20;
+  color: #9e9e9e;
+  float: right;
+  cursor: pointer;
+}
+#previousButton:hover {color: rgb(116, 116, 116)}
+#forwardButton:hover {color: rgb(116, 116, 116)}
+.wrong #forwardButton {color: #ff2d26}
+.close #forwardButton, .close #previousButton {color: #fff}
+
+#inputContainer {
+  position: relative;
+  padding: 30px 20px 20px 20px;
+  margin: 10px 60px 10px 10px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+#inputContainer input {
+  position: relative;
+  width: 100%;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: 0;
+  background: transparent;
+  box-shadow: none;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#inputLabel {
+  position: absolute;
+  pointer-events: none;
+  top: 32px; /* same as container padding + margin */
+  left: 20px; /* same as container padding */
+  font-size: 20px;
+  font-weight: bold;
+  transition: .2s ease-in-out;
+}
+
+#selectLabel {
+  position: absolute;
+  display: none;
+}
+
+#inputContainer input:valid + #inputLabel {
+  top: 9px;
+  left: 42px; /* space for previous arrow */
+  margin-left: 0!important;
+  font-size: 11px;
+  font-weight: normal;
+  color: #9e9e9e;
+}
+
+#inputContainer input:focus + #inputLabel {
+  top: 9px;
+  left: 42px; /* space for previous arrow */
+  margin-left: 0!important;
+  font-size: 11px;
+  font-weight: normal;
+  color: #9e9e9e;
+}
+
+#datum, #vrijeme {
+  cursor: pointer;
+  background-color:rgba(0,0,0,0.3);
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A@{arrow}%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: auto 50%;
+  border-radius:5px;
+  border: none; 
+  color: #000;
+  padding: 10px 30px 10px 10px;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+#inputProgress {
+  border-bottom: 3px solid rgb(116, 116, 116);
+  width: 0;
+  transition: width .6s ease-in-out;
+}
+
+.wrong #inputProgress {
+  border-color: #ff2d26;
+}
+
+@media (max-width: 601px) {
+  .logo {width: 60%}
+  .center {width: 80%;}
+  #register {width: 100%;}
+}
